@@ -1,0 +1,297 @@
+﻿Núm,Projeto,Relator,Atribuído a,Categoria,Data de Envio,Atualizado,Estado,Resumo,Corrigido na Versão,Data Limite,Descrição
+0005108,C Projeto GPFB,Matheus,,[C Projeto GPFB]-[Cat] Sangria de Caixa (Saída),2020-01-09,2020-01-09,novo,Corrigir busca de sangrias,,,Caso seja realizada uma Sangria com o histórico minúsculo o sistema não consegue buscar pelo mesmo.
+0005088,M Projeto GPFB,Ronaldo,Isaias,[M Projeto GPFB]-[Cat] Orçamento / Pedido de Compra,2020-01-06,2020-01-09,atribuído,Perguntar se deseja agrupar quantidades se o bloqueio de lançamento em duplicidade estiver marcado,,,"Caso o bloqueio de lançamento de produtos em duplicidade estiver marcado o sistema deve perguntar ao usuário se ele deseja agrupar as quantidades, a anterior e a atual"
+0005107,M Projeto GPFB,Ronaldo,Claudio,[M Projeto GPFB]-[Cat] Outras Entradas / Saídas,2020-01-09,2020-01-09,atribuído,Operações com CFOP específico como o 5924 não devem contabilizar estoque,,,"Operações que usem CFOPs como o 5924 não devem contabilizar estoque pois são movimentos realizados para sinalizar entrega ou industrialização de mercadoria já emitida em uma venda.
+
+A orientação é alterar a tabela de CFOPs existente adicionando um campo que informe que aquele CFOP não deve ser utilizado em vendas, apenas em outras entradas e saídas e sua movimentação não deve ser contabilizada."
+0005105,M Projeto GPFB,Ronaldo,,[M Projeto GPFB]-[Cat] Cartões de Crédito,2020-01-08,2020-01-08,novo,Criar cadastro de taxas por período de prazos,,,"O cadastro deve ser vinculado à descrição (cadastro já existente hoje) onde o usuário poderá indicar que para aquela conbiação de bandeira e crendenciadora poderão existir aquelas opções de parcelamento:
+
+Tabela
+*id
+*id_taxa
+*intervaloA
+*intervaloB
+*porcentagem 
+*data_cad
+*data_alteracao
+*usuario_cad
+*usuario_alter
+
+Durante o lançamento o usuário deverá indicar o valor do movimento ou este valor pode ser capturado durante a venda, e o sistema deverá apresentar a lista de preços baseados nos cadastros de Taxas, respeitando a seleção de operadora e credenciadora realizado antes da amostragem dos valores.
+
+Após a seleção da taxa o sistema deverá lançar o valor a mais como acréscimo na venda.
+
+Permissões 
+*Alterar taxa;
+*alterar prazo;e
+*excluir intervalo.
+"
+0004055,M Projeto GPFB,Amorim,Jackson,[M Projeto GPFB]-[Cat] Geral,2019-06-05,2020-01-08,confirmado,Remover componente de gravação em cd da sislybrary,,,"Remover componente de gravação em cd da sislybrary, para fazer o backup, pois não funciona no delphi tokio"
+0005098,C Projeto GPFB,Matheus,Tiago,[C Projeto GPFB]-[Cat] Vendas,2020-01-07,2020-01-08,retorno,Problema na venda MFE com entrada no cartão de crédito,,,Caso a venda seja para MFE e tenha entrada com cratão de crédito o sistema está disparando um erro.
+0005099,M Projeto GPFB,Ronaldo,,[M Projeto GPFB]-[Cat] Emissão de NFe,2020-01-08,2020-01-08,novo,Criar mensagem de confirmação para cancelamento do pedido de nota inutilizada,,,"Quando o usuário for inutilizar uma nota o sistema deverá perguntar ao mesmo se ele deseja que o sistema também cancele o cupom, caso aconteça o sistema procederá com o cancelamento normalmente, caso não o sistema deverá limpar os dados da nota do pedido "
+0005093,M Projeto GPFB,Ronaldo,Bruno,[M Projeto GPFB]-[Cat] Relatórios,2020-01-07,2020-01-07,atribuído,Adicionar opção ao relatório de Ordem de Serviço por período opção de apenas o serviço selecionado,,,"Quando o usuário selecionar um Serviço nos filtros habilitar opção para que o usuário indique ao sistema que liste apenas aquele serviço nas OS listadas, o relatório deverá listar os campos:
+
+*Cod. OS
+*Cod. Serviço
+*Desc Serviço
+*Vendedor/Técnico
+*Valor
+*Quantidade
+
+O relatório deverá ser feito em listagem simples, sem detalhes e conter apenas alguns totalizadores ao final:
+
+*Quantidade de OS listadas
+*Total de Quantidades 
+*Valor Total"
+0005087,M Projeto GPFB,Ronaldo,,[M Projeto GPFB]-[Cat] Vendas,2020-01-06,2020-01-06,novo,Perguntar se deseja agrupar quantidades se o bloqueio de lançamento em duplicidade estiver marcado,,,"Caso o bloqueio de lançamento de produtos em duplicidade estiver marcado o sistema deve perguntar ao usuário se ele deseja agrupar as quantidades, a anterior e a atual"
+0004056,M Projeto GPFB,Amorim,Jackson,[M Projeto GPFB]-[Cat] Geral,2019-06-05,2020-01-03,atribuído,Substituir tipos de dados que não existe no delphi novo,,,"Observações de Jackson: ""Substituir tipos de dados que não existe no delphi novo, veja o vídeo: https://www.youtube.com/watch?v=oR2pn7XsiUY"""
+0005082,C Projeto GPFB,Matheus,,[C Projeto GPFB]-[Cat] Entrada de Mercadoria,2020-01-03,2020-01-03,novo,Problema na entrada de mercadoria por importação de XML,,,Quando marcada a configuração 52 da aba de estoque a mesma só deve funcionar se os itens não tiverem relacionamento.
+0003782,Pesquisas,Amorim,Jackson,.,2019-04-11,2020-01-03,atribuído,Migrar gp para delphi tokio,,,Migrar gp para delphi versão mais recente.
+0005025,M Projeto GPFB,Matheus,Tiago,[M Projeto GPFB]-[Cat] Relatórios,2019-12-13,2020-01-03,atribuído,Adicionar seção de lançamento de cartões ao Balancete.,,,"Adicionar total geral dos cartões recebidos no período, total de antecipação e total."
+0003781,Pesquisas,Amorim,Jackson,.,2019-04-11,2020-01-03,atribuído,Atualizar Pngcomponent,,,Atualizar Pngcomponent. Repositório do código: https://bitbucket.org/uweraabe/pngcomponents/downloads/
+0004057,M Projeto GPFB,Amorim,,[M Projeto GPFB]-[Cat] Geral,2019-06-05,2020-01-02,novo,Refazer tela de etiqueta dinâmica para poder remover a dependência do RAVE,,,"Observações de Jackson: ""Refazer tela de etiquetas para poder remover a dependência do RAVE, usar exemplo que tem dentro da pasta acbr para etiquetas.""
+
+O rave também é usado em outras telas como impressão da carta de correção. Substituir lá também, provavelmente pelo fortes report. Verificar se tem exemplo de impressão de carta de correção no acbr"
+0005064,Pesquisas,Jackson,Jackson,.,2019-12-26,2020-01-02,novo,Adicionar chave primárias as tabelas que não possuem para poder usar o replicador,,,Adicionar chave primárias as tabelas que não possuem para poder usar o replicador comprado pela sistech: Zabbu Replicator. Além de ser uma boa prática que as tabelas possuam uma chave primária incremental.
+0005073,M Projeto GPFB,Amorim,,[M Projeto GPFB]-[Cat] Cadastro Clientes,2019-12-30,2019-12-30,novo,Controle de cartao de consumo (Comandas),,,"O consumidor, ao entrar na loja recebe um cartão com um código que será utilizado para acumular as compras e ao sair tudo que estiver relacionado ao código do cartão será exportado para uma venda.
+De outra forma o consumidor pode comprar créditos na entrada da loja e acumular no cartão que será consumido a medida que for adquirindo suas mercadorias. Ao final será exportado para a venda o que estiver relacionado com o cartão e será dado o troco se houver"
+0005067,M Projeto GPFB,Ronaldo,,[M Projeto GPFB]-[Cat] Outras,2019-12-27,2019-12-30,novo,Criação de controle de crédito por cliente,,,"Crédito
+O crédito poderá ser formado de três formas principais:
+ *Lançando pagamento maior que o débito do cliente;
+ *lançando crédito de forma manual em função específica; e
+ *lançando atraves da devolução de entrada por clientes.
+ 
+Na primeira
+ O movimento ocorre através da função de baixar contas a receber, onde o usuário irá realizar uma baixa com o valor superior ao valor devido pelo cliente esse valor, caso exista mais títulos em aberto para o cliente, poderá ser usado ou não para baixar parte do valor remanescente, para isso o sistema deverá perguntar ao usuário se o mesmo deseja usar o valor restante (crédito) para sanar parte da dívida restante do cliente.
+ 
+ Na mensagem deverá ser apresentado o valor restante da dívida do cliente e o valor restante do pagamento realizado pelo cliente.
+ 
+
+Na segunda
+ O movimento se dá de forma mais simples, executado através de tela própria para a movimentação, onde o usuário deverá selecionar o cliente, informar o valor de crédito cedido ao mesmo e informar pequenno histórico de no mínimo 10 caratecres para finalizar o lançamento.
+ 
+ O sistema antes de exibir a tela de lançamento deverá exibir uma tela listando todos os lançamentos de créditos realizados anteriormente, da mesma forma como ocorre com os lançamentos de cartões, e através dessa tela o usuário poderá realizar inclusão e exclusão, não sendo possível a realização da alteração tendo em vista a ineficácia da operação.
+ 
+ Os valores movimentados nesses lançamentos deverão constar em campo específico no cadastro de clientes, tendo campo único na tabela para isso.
+ 
+Na terceira 
+ O movimento se dá no momento da finalização da devolução ou troca(para sistema retaguarda) onde o sistema perguntará ao usuário se ele deseja lançar o valor da devolução como crédito para o cliente.
+ 
+As três opções deverão alimentar a mesma tabela de lançamento de crédito, com a diferença de que a primeira o hitórico é fixo com o texto ""Crédito cedido a partir da baixa do Título - <<numeroTitulo>>"", e a terceira ""Crédito cedido a partir da devolução  - <<numeroDevolucao>> com produtos - <<codigosProdutos>>"".
+
+Na venda o sistema poderá verificar se o cliente selecionado possui créditos em aberto, caso o mesmo possua, o sistema perguntará ao usuário se o mesmo deseja usar o crédito para a venda a ser realizada, caso o usuário selecione essa opção o sistema deverá ao final da venda lançar na tabela de baixa de crédito o valor do mesmo usado na venda.
+
+Durante a baixa de títulos o sistema deverá verificar se o cliente selecionado possui crédito em aberto, se possuir o sistema deverá apresentar a informação na parte lateral direita da tela de baixa de títulos, durante a baixa o sistema deverá perguntar ao usuário se ele deseja usar o crédito do cliente, se ele informar que sim o sistema deverá realizar a baixa e o sistema deverá lançar na tabela de baixa de crédito o valor correspondente ao usado durante essa moivimentação. 
+
+Permissões
+ Permitir
+  *Lançar crédito;
+  *excluir lançamento;
+  *gerar crédito a partir da devolução;
+  *usar crédito na venda; e
+  *usar crédito na baixa de títulos.
+ Bloquear
+  *Lançamento a partir da baixa de crédito;
+  *lançamento a partir da tela de lançamento; e
+  *lançamento a partir da devolução.
+
+Configurações
+ *Usar controle de crédito por cliente;
+ *habilitar lançamento de crédito a partir da baixa de título;
+ *habilitar lançamento de crédito a partir da devolução;
+ *obrigar uso do crédito na venda; e
+ *obrigar uso do crédito na baixa de títulos.
+ 
+Obs.: Para esse caso as configurações sobrevalessem ás permissões caso forem conflitantes em algum momento.
+ 
+Relatórios
+ Lançamento de Créditos por período;
+  Filtros
+   *Cliente;
+   *usuario;
+   *período; e
+   *tipo de lançamento (se manual ou através da baixa de título).
+   
+  Campos
+   *cdcli - nmcli;
+   *valor;
+   *data;
+   *valido (se foi excluido ou não);
+   *documento usado (concatenação da letra V para venda + "" - "" + número da venda, da mesma forma para título substituindo V por T e na devolução V por D); e   
+   *usuario.
+   
+ Lançamento de Baixas de Créditos por período;
+  Filtros 
+   *Cliente;
+   *usuario;
+   *período; e
+   *lançado através de (se por venda ou baixa).
+ 
+  Campos
+   *cdcli - nmcli;
+   *valor;
+   *data;
+   *documento usado (concatenação da letra V para venda + "" - "" + número da venda, da mesma forma para título substituindo V por T e na devolução V por D); e  
+   *usuario. 
+
+ Fechamento de caixa
+  No fechamento de caixa caso exista movimentação de crédito para vendas ou recebimento, o sistema deverá realizar a contabilização desses valores para a área da sintese correspondente, no caso de ser no pagamento de vendas o sistema deverá apresentar na parte de vendas do relatório o valor total de crédito dos clientes usados nas vendas.
+ 
+  Da mesma forma como citado acima, deverá ser considerado para o recebimento de títulos.
+  
+  No fechamento do relatório deverá ser adicionada área que contabilizará os valores de Crédito lançado e Baixa de crédito, da mesma forma no banco de dados deverão ser adionados campos que guardem esses valores.
+ 
+ Fluxo de Caixa 
+  Deve ser considerado mesmo caso das mudanças no relatório de Fechamento de Caixa, respeitados as diferenças dos filtros entre eles.
+  
+ Balancete
+  Deve seguir como o Fluxo de Caixa. 
+
+Tabelas
+ Lançamento de Créditos;
+  *id;
+  *cdcli;
+  *documento (numero do documento que gerou a baixa do crédito fatur se venda, numer se baixa de título);
+  *valor;
+  *data_ope;
+  *excluido;
+  *data_excluido;
+  *cdusu_cad;
+  *cdusu_exclu;
+  *CRB;
+  *venda;
+  *dev; e
+  *historico.
+ 
+ Lançamento de Baixa de Crédito
+  *id;
+  *cdcli;
+  *documento (numero do documento que gerou a baixa do crédito fatur se venda, numer se baixa de título);
+  *CRB;
+  *venda;
+  *cdusu_cad;
+  *histo;
+  *data_cad;
+  *estorno;
+  *cdusu_estorno; e
+  *data_estorno.
+ 
+ Fechamento de caixa
+  Adicionar
+   *credito_cedido;
+   *credito_baixado;
+   
+ Sendo os campos CRB, VENDA, DEV, ESTORNO e EXCLUIDO do tipo boolean, usados para indicar de onde forma realizados os laçamentos correspondentes.
+ Os campos ID, CDCLI e CDUSU do tipo inteiro.
+ Os campos HISTO do tipo blob.
+ Os campos DATA do tipo timestamp.
+ O campo DOCUMENTO varchar de tamanho 20.
+ "
+0003913,M Projeto GPFB,Amorim,Tiago,[M Projeto GPFB]-[Cat] Cadastro de Produtos,2019-05-06,2019-12-27,atribuído,Revisão dos campos de dados fiscais do cadastro de produtos com base na integração mix fiscal,,,"Um empresa chamada mix fiscal, contratada por um cliente nosso da zona norte do Estado, nos enviou um manual para integrar as informações fiscais do nosso programa com o programa deles para que ele faça auditoria. É preciso verificar se as informações solicitadas, estão presentes e corretas em nosso cadastro de produtos, ou se estão presentes e incorretas ou se estão ausentes."
+0005062,M Projeto GPFB,Matheus,Isaias,[M Projeto GPFB]-[Cat] Geral,2019-12-24,2019-12-27,admitido,Adicionar permissões na aba de Contas Correntes para bloquei de alteração de campos,,,"Adicionar permissões na aba de Contas Correntes para permitir a alteração dos campos de Valor, Vendedor e Data de Emissão."
+0004070,M Projeto GPFB,Amorim,Jackson,[M Projeto GPFB]-[Cat] Configurações,2019-06-12,2019-12-26,novo,Criar arquivo tipo log para armazenar historico de alteracoes de configuracoes e permissões de usuários do programa,,,"Para finalizar as queixas que tem chegado à programação, sobre alterações de configuração do programa após as atualizações, deve se criar um arquivo tipo log para armazenar o histórico de alterações de configurações e permissões de usuários, contendo os seguintes dados: MICRO; USUÁRIO; DATA DA ALTERAÇÃO; HORA DA ALTERAÇÃO; TIPO (CONFIGURAÇÃO OU PERMISSÃO); CAMPO QUE FOI ALTERADO; CONTEÚDO ANTERIOR E CONTEÚDO ATUAL.
+O arquivo deve ter nome discreto e ser armazenado no servidor com uma copia local na maquina onde ocorreu o fato.
+"
+0005056,Programação,mateusdaniel,Lazaro,[Programação]-[Cat] Geral,2019-12-20,2019-12-20,atribuído,Discutir Viabilidade de novo aplicativo mobile,,,"Um possível cliente entrou em contato com a sistech e perguntou sobre a viabilidade de desenvolver um novo aplicativo que funcionasse de maneira independente diferente do atual STHMob que funciona como uma espécie de extensão do GP, então foi anotado algumas funcionalidades e colocado como ponto de discussão para concluir a viabilidade do mesmo."
+0004564,Programação,Ronaldo,,[Programação]-[Cat] Geral,2019-09-17,2019-12-20,novo,Criar relatório no estilo mapa de vendas para o projeto Restaurante,,,"Adicionar relatório de mapa de vendas, como o existente no GP, ao projeto de restaurante.
+
+Dúvidas entrar em contato com Amorim"
+0005024,M Projeto GPFB,Matheus,Tiago,[M Projeto GPFB]-[Cat] Fechamento de Caixa,2019-12-13,2019-12-19,atribuído,Adicionar seção para recebimentos de cartões.,,,"Adicionar total geral dos cartões recebidos no dia, total de antecipação e total."
+0005031,M Projeto GPFB,Matheus,,[M Projeto GPFB]-[Cat] Geral,2019-12-16,2019-12-19,novo,Configurar impressão da marca pelo orçamento em todos os modelos de impressão.,,,Melhorar impressão do orçamento possibilitando a impressão da marca independente do modelo de impressão usado.
+0005021,M Projeto GPFB,Matheus,,[M Projeto GPFB]-[Cat] Geral,2019-12-13,2019-12-19,atribuído,Criação de relatório de simulação de recebimento antecipado de cartão.,,,"Na tela de filtro constarão os filtros por operadora, bandeira, data de emissão e data de vencimento.
+E o campo para informação da taxa de antecipação em percentual.
+
+No relatório deverá ser listadas todas as parcelas de cartões de crédito não pagas correspondentes aos filtros selecionados, deverá apresentar também o campo total da parcela, o campo taxa (total da parcela * percentual por antecipação) e total e totalizador geral de cada coluna.
+
+Criar permissão para o relatório.
+
+Criar relatório na seção de Financeiro."
+0004788,C Projeto GPFB,Ronaldo,Ronaldo,[C Projeto GPFB]-[Cat] Entrada de Mercadoria,2019-10-22,2019-12-13,atribuído,"Revisar cálculos de custo do produto quando preenchido os campo ST Retido, ST Selo e Normal",,,"Revisar cálculos de custo do produto para quando a nota tem os dois icms's substituição preenchidos e o normal tbm, Moto Peças Pe Cícero reclamou que o cálculo está errado "
+0004997,M Projeto GPFB,Matheus,,[M Projeto GPFB]-[Cat] Geral,2019-12-10,2019-12-10,novo,Verificar propriedades da impressão do DANFE,,,Em algumas empresas na impressão do DANFE gera várias páginas para a nota sendo que a mesmo não possui o número de páginas gerada.
+0004989,M Projeto GPFB,Matheus,,[M Projeto GPFB]-[Cat] Entrada de Mercadoria,2019-12-09,2019-12-09,novo,Sistema deve atualizar as informações do relacionamento quando existir discrepância entre o nome do XML com o nome no Banco.,,,"Quando realizada entrada de mercadoria e existir relacionamento para o produto o sistema deve apresentar uma outra opção quando perguntar se deseja continuar, podendo escolher entre sim, não, e sim e atualizar informações, continuando e atualizando a informação do nome caso tenha mudança."
+0004969,M Projeto GPFB,Ronaldo,,[M Projeto GPFB]-[Cat] Cadastro de Produtos,2019-12-04,2019-12-04,novo,Criar opção para atualizar o markup de produtos,,,"Criar área no sistema para atualização do markup de vários produtos de uma vez, podendo ser filtrado por grupo, subgrupo, marca e classificação, e opção definição do markup padrão para produtos novos "
+0004959,M Projeto Sistel,Matheus,,[M Projeto Sistel]-[Cat] Geral,2019-12-04,2019-12-04,novo,Criar sinalização dos protocolos,,,Criar sinalização dos protocolos para os atendentes.
+0004930,M Projeto Sistel,Isaias,Ytalo,[M Projeto Sistel]-[Cat] Geral,2019-11-25,2019-12-02,confirmado,muda tela de controle de orçamento,,,"mudar o design dos componentes das telas de listagem e de cadastro do orçamento 
+
+Menu: agenda->orçamentos"
+0004946,M Projeto Sistel,Amorim,,[M Projeto Sistel]-[Cat] Geral,2019-11-28,2019-11-28,novo,Criar um arquivo txt tipo log para as alterações na tabela de clientes,,,"Criar um log com relatório das alterações feitas no cadastro de clientes do sistel incluindo os campos: usuário, data, hora, campo alterado, conteúdo anterior e conteúdo atual do campo alterado.
+Se houver mais de um campo alterado, repetir as informacoes para cada alteração de campo.
+"
+0004945,M Projeto Sistel,Amorim,,[M Projeto Sistel]-[Cat] Geral,2019-11-28,2019-11-28,novo,Copia diaria da tabela de clientes para backup local em micros acessado por senha de diretores,,,"Quando o usuário for um dos diretores, permitir fazer um backup da tabela de clientes para que seja possível gerar senha off line
+"
+0004932,M Projeto Sistel,Isaias,Ytalo,[M Projeto Sistel]-[Cat] Geral,2019-11-25,2019-11-25,atribuído,muda tela de cadastro de módulos,,,"mudar o design dos componentes da tela de cadastro de módulos 
+
+Menu: Cadastro -> Módulos do sistema -> módulos"
+0004931,M Projeto Sistel,Isaias,Ytalo,[M Projeto Sistel]-[Cat] Geral,2019-11-25,2019-11-25,atribuído,muda tela de controle de pré requisitos,,,"mudar o design dos componentes das telas de listagem e de cadastro pré- requisito
+
+Menu: Cadastro -> Módulos do sistema -> pré-requisito"
+0004919,M Projeto GPFB,Matheus,,[M Projeto GPFB]-[Cat] Geral,2019-11-20,2019-11-20,novo,Melhoria para a apresentação das informações dos pedidos já realizados,,,"Quando na tela de início de vendas for informado um número de pedido já feito, caso a data não seja diferente da última pesquisada o sistema não atualiza a informação da hora."
+0004839,Sistech,Ytalo,Ytalo,.,2019-11-06,2019-11-12,novo,Teste SVN,,,Teste SVN
+0004828,M Projeto Site,Matheus,Ytalo,[M Projeto Site]-[Cat] Geral,2019-11-05,2019-11-05,atribuído,Função de busca no LeiaMe,,,Verificar a possibilidade de fazer a pesquisa por palavras que contenham nas alterações antes de entrar no link das versões.
+0004784,Pesquisas,Ronaldo,,.,2019-10-22,2019-10-29,novo,Cadastro de despesas periódicas,,,"O cadastro de despesas contaria com uma data, dia ou período onde o sistema, baseado no valor informado, apresentaria alertas ao usuário e faria o lançamento dessa despesas apenas apertando um botão"
+0004818,M Projeto GPFB,Matheus,,[M Projeto GPFB]-[Cat] Geral,2019-10-29,2019-10-29,novo,Melhoria para o procedimento de Saldo de Estoque (Destorção de Saldo),,,"Em alguns casos, mesmo com saldos iguais o sistema informa que há distorção de saldo."
+0004760,Programação,Ronaldo,Ytalo,[Programação]-[Cat] Geral,2019-10-17,2019-10-28,confirmado,Atualização do mantis para nova versão,,,Atualizar Mantis para versão mais nova
+0004510,M Projeto GPFB,Ronaldo,Isaias,[M Projeto GPFB]-[Cat] Geral,2019-09-09,2019-10-25,retorno,Integrar lançamento de cartões com documentos fiscais,,,Integrar o lançamento do módulo de cartões com o lançamento de cartões dos documentos fiscais e do TEF
+0004805,C Projeto GPFB,Matheus,,[C Projeto GPFB]-[Cat] Geral,2019-10-24,2019-10-24,novo,Correção para o envio de emails das NF-Es,,,Corrigir erro disparado no envio de emails das notas fiscais.
+0004786,Pesquisas,Ronaldo,,.,2019-10-22,2019-10-22,novo,Problema com notas enviadas pelo integrador,,,"Quando integrador está aberto e o sistema está executando por ele, o sistema fica com problemas para identificar as respostas retornadas por ele, verificar se o sistema pode ser configurado para que a nota possa, mesmo o sistema aberto pelo integrador, enviar a nota por fora "
+0004787,M Projeto GPFB,Ronaldo,,[M Projeto GPFB]-[Cat] Emissão de NFe,2019-10-22,2019-10-22,novo,Possobilitar impressão de Danfe simplificado,,,Adicionar opção no momento da impressão para que o sistema faça a impressão do Danfe simplificado 
+0004785,Pesquisas,Ronaldo,,.,2019-10-22,2019-10-22,novo,Verificar soluções para cálculo do custo médio,,,"O custo médio deve ser calculado sempre que há movimentação no produto, incluindo cancelamento de notas de entrada.
+
+Pode ser feito por fora da entrada de mercadoria, em função separada"
+0004667,M Projeto GPFB,Matheus,mateusdaniel,[M Projeto GPFB]-[Cat] Geral,2019-10-02,2019-10-04,atribuído,Adicionar configuração para máquina que é apenas emissora de NFe.,,,Quando estiver apenas NFe marcada configurar atalho do F2 para NFe.
+0004100,M Projeto GPFB,Ronaldo,Tiago,[M Projeto GPFB]-[Cat] Contas a Pagar,2019-06-26,2019-10-03,admitido,Criação de exportação das baixas do contas pagas e vínculo de contas de crédito e débito,,,"Layout para exportação 
+ *criar exportação para CSV dos dados de contas pagas onde os campos conta débito e crédito estejam preenchidos, essa exportação deverá conter os campos
+ *data de pagamento
+ *conta débito (conta selecionada pelo usuário no momento da baixa do título)
+ *conta crédito (conta informada no cadastro do fornecedor ou selecionada pelo usuário)
+ *estabelecimento débito (código usado para geração da escrita que indica se é matriz ou filial)
+ *estabelecimento crédito (código do fornecedor na mesma formatação que é usada no exp_par.sql da escrita fiscal)
+ *histórico (contendo a inscrição ""pagamento de título <numer>""
+ *valor pago
+
+Deverá ser adicionado campo ao cadastro de contas bancárias indicando se aquela conta é Crédito ou Débito, podendo ser apenas um rádio button. E deverá ser adicionado também campo que indique se a conta ainda está ativa ou inativa.
+
+Ao cadastro de fornecedor deverá ser adicionado um campo onde será salvo o código de uma conta já cadastrada no sistema, permitindo que o usuário apenas selecione uma conta crédito nesse campo.
+
+Deverão ser adicionados também à tela de baia de títulos a pagar os campos de conta crédito e de conta débito, que listaram todas as contas crédito e débito ativas no sistema, respectivamente.
+
+Ao adicionar o campo de conta crédito ao cadastro de Fornecedor, ela deverá ser usada no momento da baixa do título, onde o usuário ao selecionar o título de um determinado fornecedor e clicar em baixar para conta banco, o campo de conta crédito deverá vir com a conta do fornecedor já selecionada, permitindo ao usuário que selecione outra caso queira.
+
+No momento da baixa o sistema deverá gravar na tabela de lançamentos bancários, o débito na conta de débito e o crédito na conta de crédito, como também deverá criar campos de conta débito e crédito na tabela CXD para armazenar os dados correspondentes, porém, lá não serão salvos apenas os id's das conta, serão salvos os números das contas."
+0004607,Programação,Ronaldo,,[Programação]-[Cat] Geral,2019-09-24,2019-09-24,novo,Revisar e reorganizar as configurações e permissões,,,Mover das configurações as opções que se identificam muito com permissões e vise versa
+0004523,M Projeto GPFB,Matheus,,[M Projeto GPFB]-[Cat] Relatórios,2019-09-11,2019-09-11,novo,Melhoria para o relatório de Extrato de Cliente,,,"O relatório deverá ter opção de emissão resumida, onde deverá mostrar as informações de Nome do Cliente, Data de Vencimento, Dias Vencidos, Valor Atualizado, e deve ser organizado de modo a permitir a impressão na impressora I9."
+0004433,M Projeto Sistel,Ronaldo,Isaias,[M Projeto Sistel]-[Cat] Geral,2019-08-27,2019-09-05,atribuído,Criar rotina para identificar procedimentos primários em clientes novos,,,"Ao cadastrar um cliente novo, vincular tarefas a ele indicando passos a serem realizados, Passos predefinidos por programa, criar cadastro de tarefas padrões por programa"
+0004446,M Projeto GPFB,Ronaldo,,[M Projeto GPFB]-[Cat] Outras,2019-08-28,2019-08-28,novo,"Adicionar campo ao módulo de etiquetas , descrição de atacado por quantidade",,,"Adicionar campo que deverá apresentar mensagem configurável quando o campo de ""preço de atacado com quantidade igual ou superior a"" estiver preenchido no produto, ao final da mensagem o sistema deverá inserir o valor encontrado no campo."
+0004441,M Projeto GPFB,Ronaldo,,[M Projeto GPFB]-[Cat] Entrada de Mercadoria,2019-08-28,2019-08-28,novo,Permitir relacionar mais de um item por produto de fornecedor,,,"Quando na importação onde há relacionamento de produtos da base (PB) com produtos do fornecedor (PF) o sistema importa apenas um item relacionado.
+
+Essa alteração sugere que o sistema permita relacionar mais de um PB por PF para que no momento da importação o sistema apresente uma listagem dos PBs relacionados àquele PF e permita que o usuário selecione quais produtos irão ser importados e quais suas quantidades."
+0004440,M Projeto GPFB,Ronaldo,,[M Projeto GPFB]-[Cat] Entrada de Mercadoria,2019-08-28,2019-08-28,novo,Implementar rotina de download de XML já existente na tela de entrada de meradoria com melhorias,,,"A rotina de Download de XML de notas de compras existente (oculta) na tela de emissão de notas, deve ser inserida na tela de entrada de mercadoria, possibilitando que o usuário selecione na listagem a nota que queira baixar e após o download o sistema já realize a importação da mesma, devem ser observadas alterações no componente usado para tal finalidade"
+0004428,M Projeto GPFB,Ronaldo,,[M Projeto GPFB]-[Cat] Serviços,2019-08-26,2019-08-26,novo,Criar campo de técnico no lançamento do item da os,,,"Deve ser cria da configuração, onde o usuário poderá escolher qual mecânico irá realizar aquele procedimento do serviço na OS.
+
+Hoje o sistema permite lançar mais de um mecânico na OS, porém, o sistema deverá permitir escolher um dos que foram listados no início da OS no momento do lançamento do Serviço.
+*Criar configuração para habilitar o preenchimento do campo;
+*criar campo na tela de lançamento do serviço (a relação entre as informações já conta com a tabela);
+*listar no combo a ser adicionado na tela apenas os mecânicos adicionados no início da OS; e
+*caso a configuração esteja marcada o sistema não poderá permitir lançar item até que seja selecionado o mecânico."
+0004399,M Projeto GPFB,Ronaldo,,[M Projeto GPFB]-[Cat] Geral,2019-08-22,2019-08-22,novo,Adicionar possibilidade de lançamento da liberação do cheque no caixa,,,"Quando é feita a liberação do cheque o sistema apenas libera e informa apenas na conta que foi liberado, a configuração juntamente com a nova rotina deverá indicar ao usuário a possibilidade de lançar o valor do cheque liberado no caixa como conta banco, como ocorre na baia de títulos a receber "
+0004358,M Projeto Setups e Outros,Ronaldo,,.,2019-08-14,2019-08-14,novo,modificar rotina que coleta informações de pastas para compactação do arquivo,,,"No programa de envio XMLs devem ser considerados os arquivos de configuração onde estão indicados os caminhos onde ficam salvos os arquivos, caso não encontre os arquivos ou os caminhos em questão o sistema deve solicitar o preenchimento de tal informação de maneira manual como ocorre hoje"
+0004342,M Projeto GPFB,Ronaldo,Claudio,[M Projeto GPFB]-[Cat] Geral,2019-08-12,2019-08-12,atribuído,Adicionar filtro à tela de baixa de títulos a receber,,,Adicionar filtro para listar apenas títulos referente a boletos
+0004340,M Projeto GPFB,Ronaldo,Claudio,[M Projeto GPFB]-[Cat] Geral,2019-08-12,2019-08-12,atribuído,Criar rotina de atualização do status dos boletos,,,"A rotina deve verificar se o boleto já foi pago, através de função disponível na gerencianet, e gerar os registros correspondentes na tabela CXD e atualizar o registro correspondente na tabela CRB."
+0004174,M Projeto GPFB,Ronaldo,,[M Projeto GPFB]-[Cat] Contas a Receber,2019-07-10,2019-07-16,novo,Criar meclagem de títuos a receber,,,"Solicitado por Zé de Hercílio e aprovado pela direção da empresa.
+
+Criar tabela CRBS_MESCLADOS de junção idêntica a tabela IN10CRB sendo nela adicionado mais um campo NUMER_ORIGEM, será criado um registro para cada título que deu origem ao título de destino, na IN01CRB deverá ser adicionado campo com indicação de se o título é um mesclado ou não. Na tabela CRBS_MESCLADOS também deverão constar dois campos indicando o usuário que fez e a data em que foi feita a mesclagem.
+
+A tela deverá conter campos para que o usuário possa informar o novo numer, o cliente e campo para informar se será gerado através do número dos títulos ou dos pedidos que irão gerar esse novo título, ao informar esses dados seria interessante que o usuário pudesse clicar em um botão que listaria o total acumulado de todos os itens para que o mesmo posse indicar, em campo próprio, um desconto ou acrescimo, e assim continuar com a gravação dos dados. Outra funcionalidade interessante seria a de listar os títulos em aberto do cliente selecionado e o usuário poder escolher entre eles os que deseja mesclar.
+
+A rotina copiará os títulos informados para a tabela CRBS_MESCLADOS, e irá deletar os mesmo da IN01CRB, depois irá adicionar na IN01CRB os dados do título de destino.
+
+O valor do título de destino deverá equivaler ao valor total apresentado na tela de seleção de títulos.
+
+Na tela de títulos a receber, existe uma função que possibilita visualizar os produtos existentes para a venda que gerou aquele título caso o usuário clique duas vezes sobre o título e esse tenha na IN01CRB o campo fatur preenchido. Será adicionado a listagem o campo fatur e o SQL usado deverá ser escolhido com base no título se é mesclado ou não, se for mesclado, nessa tela deverá constar todos os produtos dos títulos que foram mesclados."
+0004058,M Projeto GPFB,Amorim,,[M Projeto GPFB]-[Cat] Entrada de Mercadoria,2019-06-06,2019-06-28,novo,"Ao importar itens de NF-e de entrada de fora do estado, seguindo a configuração de troca de CFOP, verificar CST do produto.",,,"Caso alterado, verificar informações adicionais
+
+Ao importar itens de NF-e de entrada de fora do estado, seguindo a configuração de troca de CFOP, verificar CST do produto. Se o CFOP de entrada for 6.102 e o CST de do item no cadastro de produto for [60], caso a empresa seja de CRT Normal ou [500], caso a empresa seja do Simples Nacional, trocar o CFOP para 2.403 ao invés de 2.102"
+0004019,M Projeto GPFB,Amorim,,[M Projeto GPFB]-[Cat] Relatórios,2019-05-29,2019-06-27,novo,Adicionar bloco de lançamentos bancários ao relatório de Balancete,,,"Adicionar bloco de lançamentos bancários considerando Créditos e Débitos ao relatório de Balancete, apresentando totalizar das movimentações.
+
+No bloco de Síntese do caixa deverá ser adicionada uma linha com a movimentação de lançamentos bancários e deverá compor valor do total desse bloco"
+0003778,Pesquisas,Amorim,Ronaldo,.,2019-04-11,2019-06-11,confirmado,Migrar relatórios de quick para fortes report,,,"Vários passos a seguir, começando por contar quantos relatórios e suas variações existem no programa GP."
